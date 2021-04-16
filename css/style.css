@@ -441,6 +441,8 @@ body {
 
 .header {
   box-shadow: 0px 5px 60px rgba(0, 0, 0, 0.05);
+  position: relative;
+  height: 8.125rem;
 }
 .header__container {
   display: flex;
@@ -476,6 +478,9 @@ body {
   margin-right: 0.9375rem;
 }
 
+.search--margin {
+  margin-right: 5rem;
+}
 .search__box {
   display: flex;
   width: 13.875rem;
@@ -499,6 +504,111 @@ body {
   border-bottom-right-radius: 0.25rem;
   border: none;
   color: var(--color-logo);
+}
+
+.burger {
+  position: relative;
+  width: 26px;
+  height: 24px;
+  cursor: pointer;
+}
+.burger__row {
+  position: absolute;
+  height: 0.1875rem;
+  width: 1.5rem;
+  background: var(--color-logo);
+  border: 1px solid var(--color-logo);
+}
+.burger__row--1 {
+  position: absolute;
+  top: 0;
+  transition: 0.4s;
+}
+.burger__row--2 {
+  position: absolute;
+  top: 8px;
+  right: 2px;
+  width: 10px;
+  transition: 0.4s;
+}
+.burger__row--3 {
+  position: absolute;
+  top: 16px;
+  transition: 0.4s;
+}
+
+.active .burger__row--1 {
+  transform: rotate(-45deg) translate(-4px, 6px);
+}
+
+.active .burger__row--2 {
+  opacity: 0;
+}
+
+.active .burger__row--3 {
+  transform: rotate(45deg) translate(-5px, -8px);
+}
+
+.mobile {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4.375rem;
+  right: 0;
+  top: 130px;
+  background: #fff;
+  box-shadow: inset 0px 2px 0px #2575E6;
+  width: 30vw;
+  height: 85vh;
+  z-index: 7;
+  transition: 0.5s;
+}
+.mobile.hide {
+  transform: translateX(1000px);
+}
+.mobile__nav {
+  color: var(--color-logo);
+}
+.mobile__list {
+  padding: 1.25rem;
+  font-family: var(--font-medium);
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+}
+.mobile__list:hover {
+  cursor: pointer;
+  color: var(--color-main);
+}
+
+.banner {
+  background: linear-gradient(270deg, rgba(37, 117, 230, 0) 0%, rgba(37, 117, 230, 0.5) 100%), url("../img/back1.jpg") center/cover;
+  height: 85vh;
+}
+.banner__container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 3.125rem 0;
+}
+.banner__title {
+  width: 41.625rem;
+  min-height: 7.5rem;
+  font-family: var(--font-bold);
+  color: #fff;
+  font-size: 3.875rem;
+  line-height: 3.75rem;
+  margin-bottom: 3.125rem;
+}
+.banner__text {
+  width: 59.6875rem;
+  min-height: 8.75rem;
+  font-family: var(--font-light);
+  font-weight: 300;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 2.1875rem;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,9 +13,16 @@ header.header
           |Профессиональный лицей
         p.header__text 
           |Коммуникационный и информационных технологий №98
-    .search 
-      .search__box 
-        .search__form 
-          input(type="text" placeholder="Поиск по сайту").search__input  
-        button.search__btn 
-          span.icon-search      
+    .header__wrap 
+      .search.search--margin 
+        .search__box 
+          .search__form 
+            input(type="text" placeholder="Поиск по сайту").search__input  
+          button.search__btn 
+            span.icon-search      
+      .burger
+        .burger__row.burger__row--1
+        .burger__row.burger__row--2
+        .burger__row.burger__row--3
+  include ./_mobile
+    
