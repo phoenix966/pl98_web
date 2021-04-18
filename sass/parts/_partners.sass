@@ -1,0 +1,26 @@
+.partner
+  &--margin
+    margin-bottom: rem(50px)
+  &__title
+    position: relative
+    font-family: var(--font-medium)
+    font-size: rem(48px)
+    color: #000
+    margin-bottom: rem(90px)
+    &:after
+      position: absolute
+      content: ''
+      bottom: rem(-15px)
+      left: 0
+      width: 30%
+      height: rem(5px)
+      background: var(--color-main)
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__picture
+    flex-basis: rem(240px)
+  &__img
+    width: 100%
+    object-fit: cover
