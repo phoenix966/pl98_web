@@ -711,7 +711,7 @@ body {
 .partner__title {
   position: relative;
   font-family: var(--font-medium);
-  font-size: 3rem;
+  font-size: 2.625rem;
   color: #000;
   margin-bottom: 5.625rem;
 }
@@ -720,7 +720,7 @@ body {
   content: "";
   bottom: -0.9375rem;
   left: 0;
-  width: 30%;
+  width: 20%;
   height: 0.3125rem;
   background: var(--color-main);
 }
@@ -730,7 +730,7 @@ body {
   align-items: center;
 }
 .partner__picture {
-  flex-basis: 15rem;
+  width: 7.5rem;
 }
 .partner__img {
   width: 100%;
