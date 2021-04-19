@@ -18,6 +18,8 @@ const swiper = new Swiper('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
+  centerSlides: true,
+  effect: 'fade',
 
   // If we need pagination
   // pagination: {

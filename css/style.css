@@ -388,6 +388,7 @@ html {
   --color-back: #ECF0FB;
   --color-logo: #393939;
   --color-search: #8E90A6;
+  --color-dots: #64CCE3;
   --font-light: "Rubik-light",sans-serif;
   --font-regular: "Rubik-regular",sans-serif;
   --font-medium: "Rubik-medium",sans-serif;
@@ -1236,17 +1237,7 @@ button.swiper-pagination-bullet {
   position: relative;
   width: 50rem;
   height: 32.5rem;
-  padding-top: 6.25rem;
-}
-.swiper-container:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #000;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  z-index: 78;
 }
 .swiper__wrapper {
   display: flex;
@@ -1256,6 +1247,7 @@ button.swiper-pagination-bullet {
   height: 100%;
 }
 .swiper__box {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1267,25 +1259,22 @@ button.swiper-pagination-bullet {
   border-radius: 25px;
   box-shadow: 0px 4.53741px 18.1496px #F2F5FA, 0px 4.53741px 18.1496px #F2F5FA, 0px 4.53741px 18.1496px #F2F5FA;
 }
-.swiper__img {
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-}
-.swiper__picture {
+.swiper__box::after {
+  content: "";
   position: absolute;
-  overflow: hidden;
   top: -3.125rem;
-  left: 0;
   right: 0;
+  left: 0;
   margin: 0 auto;
-  width: 6.25rem;
-  height: 6.25rem;
   border: 5px solid #fff;
   border-radius: 50%;
+  background: url("../img/comments/ava.png") center/cover, #fff;
+  width: 6.25rem;
+  height: 6.25rem;
   box-shadow: 0px 4.53741px 18.1496px #F2F5FA, 0px 4.53741px 18.1496px #F2F5FA, 0px 4.53741px 18.1496px #F2F5FA;
 }
 .swiper__title {
+  padding-top: 0.625rem;
   font-family: var(--font-medium);
   font-size: 1.125rem;
   line-height: 1.3125rem;
@@ -1311,9 +1300,9 @@ button.swiper-pagination-bullet {
   align-items: center;
 }
 .swiper__buttons button {
-  padding: 0 0.9375rem;
+  padding: 1px 0.9375rem;
   text-align: center;
-  font-size: 28px;
+  font-size: 1.75rem;
   margin: 0 5px;
   border-radius: 7px;
   color: var(--color-main);
@@ -1322,6 +1311,27 @@ button.swiper-pagination-bullet {
 .swiper__buttons button:hover {
   background: var(--color-main);
   color: #fff;
+}
+.swiper__grid {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(6, 0.3125rem);
+  grid-template-columns: repeat(6, 0.3125rem);
+  grid-gap: 0.9375rem;
+}
+.swiper__grid--left {
+  top: 10px;
+  left: 40px;
+}
+.swiper__grid--right {
+  bottom: 8px;
+  right: 40px;
+}
+.swiper__dot {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  border-radius: 50%;
+  background: var(--color-dots);
 }
 
 .news--margin {
@@ -1380,19 +1390,18 @@ button.swiper-pagination-bullet {
 }
 .news__text:nth-of-type(1) {
   position: absolute;
-  left: 1.5625rem;
+  left: 0.625rem;
 }
 .news__text:last-child {
   position: absolute;
-  right: 1.5625rem;
+  right: 0.625rem;
 }
 .news__paragraph {
   font-family: var(--font-bold);
   font-size: 1.375rem;
-  width: 28.125rem;
   min-height: 3.625rem;
   color: var(--color-second);
-  margin: 2.1875rem 1.5625rem;
+  margin: 1rem 0.5625rem;
 }
 .news__buttons {
   padding-top: 1.25rem;
