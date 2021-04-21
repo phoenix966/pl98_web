@@ -1,4 +1,5 @@
 .comment
+  position: relative
   background: var(--color-back)
   padding: rem(100px) 0
   &__row
@@ -27,4 +28,26 @@
     color: var(--color-main)
     border-radius: 10px
     background: var(--color-back)
+  &__picture
+    position: absolute
+    border-radius: 50%
+    border: 5px solid #fff
+    &--default
+      top: 240px
+      left: 240px
+      width: rem(50px)
+      height: rem(50px)
+      background: url('../img/comments/default.png') top center / cover
+    &--big
+      top: 240px
+      right: 240px
+      width: rem(100px)
+      height: rem(100px)
+      background: url('../img/comments/default.png') top center / cover
+    &--small
+      top: 220px
+      left: 180px
+      width: rem(30px)
+      height: rem(30px)
+      background: url('../img/comments/default.png') top center / cover
     
