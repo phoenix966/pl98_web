@@ -19,7 +19,7 @@ const swiper = new Swiper('.swiper-container', {
   direction: 'horizontal',
   loop: true,
   centerSlides: true,
-  effect: 'coverflow',
+  effect: 'slide',
 
   // If we need pagination
   // pagination: {

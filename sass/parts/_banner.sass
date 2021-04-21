@@ -1,29 +1,41 @@
 .banner
   background: linear-gradient(270deg, rgba(37, 117, 230, 0) 0%, rgba(37, 117, 230, 0.5) 100%), url('../img/back1.jpg') center /cover
   height: 85vh
+  +media(728px)
+    height: 85vh
   &__container
     display: flex
     align-items: flex-start
     flex-direction: column
     justify-content: center
     height: 100%
-    padding: rem(50px) 0
+    padding: rem(20px) 10px
+    +media(728px)
+      padding: rem(50px) 0
   &__title
-    width: rem(666px)
-    min-height: rem(120px)
+    min-height: rem(70px)
     font-family: var(--font-bold)
     color: #fff
-    font-size: rem(62px)
-    line-height: rem(60px)
-    margin-bottom: rem(50px)
+    font-size: rem(28px)
+    margin-bottom: rem(10px)
+    +media(728px)
+      min-height: rem(120px)
+      width: rem(666px)
+      font-size: rem(62px)
+      line-height: rem(60px)
+      margin-bottom: rem(50px)
   &__text
-    width: rem(955px)
+    width: rem(280px)
     min-height: rem(140px)
     font-family: var(--font-light)
     font-weight: 300
     color: #fff
-    font-size: rem(24px)
-    line-height: rem(35px)
+    font-size: rem(16px)
+    line-height: rem(20px)
     margin: 0
+    +media(728px)
+      font-size: rem(24px)
+      line-height: rem(35px)
+      width: rem(955px)
 
 

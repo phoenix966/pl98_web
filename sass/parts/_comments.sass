@@ -3,15 +3,22 @@
   background: var(--color-back)
   padding: rem(100px) 0
   &__row
+    padding: 0 10px
     display: flex
-    justify-content: space-between
+    justify-content: flex-start
     align-items: center
+    flex-wrap: wrap
+    +media(728px)
+      padding: 0
+      justify-content: space-between
   &__title
     position: relative
     font-family: var(--font-medium)
     font-size: rem(42px)
     color: #000
-    margin-bottom: rem(90px)
+    margin-bottom: rem(40px)
+    +media(728px)
+      margin-bottom: rem(90px)
     &:after
       position: absolute
       content: ''

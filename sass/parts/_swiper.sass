@@ -546,9 +546,11 @@ button.swiper-pagination-bullet
 .swiper
   &-container 
     position: relative
-    width: rem(800px)
+    width: 100%
     height: rem(520px)
     z-index: 78
+    +media(820px)
+      width: rem(800px)
   &__wrapper
     display: flex
     align-items: center
@@ -557,13 +559,15 @@ button.swiper-pagination-bullet
     height: 100%
   &__box
     position: relative
-    width: 80%
+    width: 98%
     height: rem(360px)
     padding-top: rem(40px)
     background: #fff
     border-radius: 25px
-    box-shadow: -3px 1px 9px 1px rgba(0,0,0,0.3)
     cursor: grab
+    +media(528px)
+      box-shadow: -3px 1px 9px 1px rgba(0,0,0,0.3)
+      width: 80%
     &::after
       content: ''
       position: absolute
@@ -596,6 +600,9 @@ button.swiper-pagination-bullet
     font-size: rem(14px)
     color: #858688
     padding: rem(40px) rem(40px) rem(40px) rem(40px)
+    height: 100px
+    overflow-x: hidden
+    overflow-y: scroll
   &__buttons
     display: flex
     justify-content: center
@@ -604,7 +611,7 @@ button.swiper-pagination-bullet
       display: flex
       justify-content: center
       align-items: center
-      padding: 1px rem(8px)
+      padding: 0 rem(8px)
       text-align: center
       font-size: rem(28px)
       margin: 0 5px
@@ -623,11 +630,19 @@ button.swiper-pagination-bullet
     grid-template-columns: repeat(6,rem(5px))
     grid-gap: rem(15px)
     &--left
+      // transform: rotateZ(45deg)
       top: rem(5px)
-      left: rem(35px)
+      left: rem(35px)   
+      +media(820px)
+        left: rem(35px)
+        // transform: rotateZ(0deg)
     &--right
-      bottom: rem(-5px)
+      // transform: rotateZ(45deg)
+      bottom: rem(5px)
       right: rem(35px)
+      +media(820px)
+        right: rem(35px)
+        // transform: rotateZ(0deg)
   &__dot
     width: rem(5px)
     height: rem(5px)

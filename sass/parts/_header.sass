@@ -6,7 +6,9 @@
     display: flex
     justify-content: space-between
     align-items: center
-    padding: rem(35px) 0
+    padding: rem(35px) 10px
+    +media(728px)
+      padding: rem(35px) 0
   &__wrap
     display: flex
     align-items: center
@@ -17,18 +19,28 @@
     justify-content: flex-start
     color: var(--color-logo)
   &__title
+    // display: none
     margin: rem(5px) 0
     color: inherit
     font-family: var(--font-medium)
-    font-size: rem(22px)
+    font-size: rem(16px)
+    width: 200px
+    +media(728px)
+      font-size: rem(22px)
+      width: unset
   &__text
+    // display: none
     margin: 0
     color: inherit
     font-family: var(--font-light)
     font-size: rem(12px)
 .logo
   margin-right: rem(15px)
+  padding-bottom: rem(20px)
 .search
+  display: none
+  +media(728px)
+    display: unset
   &--margin
     margin-right: rem(80px)
   &__box
